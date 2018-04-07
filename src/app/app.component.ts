@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  public title:string="Blue Mountain Cigars";
+  constructor(
+    private titlePortal: Title){
+    this.titlePortal.setTitle("BMC");
+  }
+
 }

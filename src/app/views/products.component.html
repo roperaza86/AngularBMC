@@ -1,0 +1,39 @@
+<div><h5>{{title}}</h5></div>
+<hr>
+<div *ngIf="products; then viewProducts else viewNoProducts"></div>
+    <ng-template #viewProducts>
+        <table class="table table-striped ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Vitola</th>
+                    <th>Capa</th>
+                    <th>Liga</th>
+                    <th>Stock</th>
+                    <th>Date</th>
+                    <th>Entry</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                        <td>{{product.id}}</td>
+                        <td> {{product.vitola}}</td>
+                        <td> {{product.capa}}</td>
+                        <td> {{product.liga}} </td>
+                        <td> {{product.stock}} </td>
+                        <td> {{product.dateE}} </td>
+                        <td> {{product.entry}} </td>
+                </tr>
+            </tbody>    
+        </table>
+    </ng-template>
+    <ng-template #viewNoProducts>
+         <p>loading ....</p>
+    </ng-template>
+
+   
+
+  
+
+
+
